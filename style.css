@@ -1,52 +1,41 @@
-* {
+/* Reset styles */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #1a1a2e;
 }
 
-body {
-    font-family: Arial, sans-serif;
+/* Particle effect container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send it behind other content */
+}
+
+/* Center content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: black;
+    z-index: 1; /* Ensure it's above particles */
 }
 
-.background {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), black);
-    animation: pulse 5s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { background: radial-gradient(circle, rgba(0, 50, 100, 0.6), black); }
-    100% { background: radial-gradient(circle, rgba(50, 0, 100, 0.6), black); }
-}
-
-.content {
-    position: relative;
-    z-index: 10;
-}
-
+/* Social media links */
 .socials a {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    color: white;
+    color: #00aaff;
     text-decoration: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    transition: 0.3s;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .socials a:hover {
-    background: white;
-    color: black;
+    color: #ffcc00;
+    text-decoration: underline;
 }
